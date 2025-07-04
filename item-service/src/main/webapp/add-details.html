@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Update Item</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="css/add-item.css">
+
+</head>
+<body>
+<div class="container">
+  <div class="text">Add Description</div>
+
+  <form action="/item-service/ItemDetailsController" method="get">
+    <div class="form-row">
+      <div class="input-data">
+        <input type="text" name="description" required>
+        <div class="underline"></div>
+        <label>Description</label>
+      </div>
+
+      
+      
+      <input type="hidden" name="action" value="add-item-details">
+      <input type="hidden" name="itemId" value="${itemDetailsData.itemId}">
+    </div>
+
+    <input type="submit" value="Add Details" class="button">
+  </form>
+
+  <p class="back">
+    <a href="itemController?action=list-items">Back To Items</a>
+  </p>
+</div>
+</body>
+</html>
